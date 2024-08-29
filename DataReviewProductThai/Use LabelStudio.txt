@@ -1,0 +1,10 @@
+python -m venv env
+.\env\Scripts\activate
+python -m pip install label-studio
+pip install label-studio
+label-studio
+
+Docker
+docker pull heartexlabs/label-studio:latest
+docker run -it -p 8080:8080 -v %cd%/mydata:/label-studio/data heartexlabs/label-studio:latest label-studio --log-level DEBUG
+
